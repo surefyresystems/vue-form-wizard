@@ -248,7 +248,7 @@
       removeTab (item) {
         if (this.removingWizard) {
           // If removing entire wizard, prevent emitting tab change events
-          return;
+          return
         }
 
         const tabs = this.tabs
@@ -469,8 +469,8 @@
     mounted () {
       this.initializeTabs()
     },
-    beforeDestroy() {
-      this.removingWizard = true;
+    beforeDestroy () {
+      this.removingWizard = true
     },
     watch: {
       '$route.path' (newRoute) {
